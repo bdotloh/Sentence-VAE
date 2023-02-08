@@ -41,7 +41,7 @@ def main(args):
     
     model.eval()
 
-    samples, z = model.inference(n=args.num_samples)
+    samples, z = model.inference(n=args.num_samples,z=None)
     print('----------SAMPLES----------')
     print(*idx2word(samples, i2w=i2w, pad_idx=w2i['<pad>']), sep='\n')
 
